@@ -1,0 +1,87 @@
+env:
+  TERM: alacritty
+
+window:
+  dynamic_padding: true
+  decorations: None
+  padding:
+    x: 10
+    y: 10
+
+scrolling:
+  history: 100000
+
+font:
+  normal:
+    family: MonoLisa Nerd Font
+    style: Regular
+
+  bold:
+    family: MonoLisa
+    style: Bold
+  italic:
+    family: MonoLisa
+    style: Italic
+  bold_italic:
+    family: MonoLisa
+    style: Italic
+  # Font size
+  size: 14.0
+
+  offset:
+   x: 0
+   y: 14
+
+  glyph_offset:
+   x: 0
+   y: 7
+
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+key_bindings:
+  # Use command + [ - to go to previous tmux window
+  - { key: LBracket, mods: Command, chars: "\x5c\x70" }
+  # Use command + ] - to go to previous tmux window
+  - { key: RBracket, mods: Command, chars: "\x5c\x6e" }
+  # ctrl-^ doesn't work in some terminals like alacritty
+  - { key: Key6, mods: Control, chars: "\x1e" }
+
+
+# Colors (Gruvbox dark)
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  # Bright colors
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
