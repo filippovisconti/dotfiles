@@ -54,7 +54,7 @@ key_bindings:
   - { key: Key6, mods: Control, chars: "\x1e" }
 
 # Colors
-# Colormode: light
+# Colormode: dark
 # import:
 #   - /Users/filippovisconti/.config/alacritty/themes/catppuccin-latte.yml
 colors:
