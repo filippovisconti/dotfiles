@@ -10,7 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 local plugins = {
   -- themes
   "daschw/leaf.nvim",
@@ -156,6 +155,7 @@ local plugins = {
     end
   },
   "romgrk/barbar.nvim",
+  { "shortcuts/no-neck-pain.nvim", version = "*" },
   {
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -165,6 +165,9 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("todo-comments").setup()
+    end
   },
   --[[ {
     'anuvyklack/pretty-fold.nvim',
@@ -212,7 +215,19 @@ local plugins = {
       require("wilder").setup({ modes = { ":", "/", "?" } })
     end,
   },
-
+  "MunifTanjim/nui.nvim",
+  "rcarriga/nvim-notify",
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  },
   -- lsp and completion
   "github/copilot.vim",
   {
@@ -252,7 +267,30 @@ local plugins = {
       })
     end
   },
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {},
+          ["core.concealer"] = {},
+          ["core.dirman"] = {
+            config = {
+              workspaces = {
+                notes = "~/Developer/notes",
+              },
+              default_workspace = "notes",
+            },
+          },
+        },
+      }
 
+      vim.wo.foldlevel = 99
+      vim.wo.conceallevel = 2
+    end,
+  },
   -- snippets
   {
     "L3MON4D3/LuaSnip",
