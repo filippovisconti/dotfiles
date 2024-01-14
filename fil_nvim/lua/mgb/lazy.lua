@@ -169,21 +169,7 @@ local plugins = {
       require("todo-comments").setup()
     end
   },
-  --[[ {
-    'anuvyklack/pretty-fold.nvim',
-    config = function()
-      require('pretty-fold').setup({
-   keep_indentation = false,
-   fill_char = '•',
-   sections = {
-      left = {
-         '+', function() return string.rep('-', vim.v.foldlevel) end,
-         ' ', 'number_of_folded_lines', ':', 'content',
-      }
-   }
-})
-    end
-  }, ]]
+
   {
     -- start screen
     "goolord/alpha-nvim",
@@ -220,9 +206,7 @@ local plugins = {
   {
     "folke/noice.nvim",
     event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
+
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
@@ -249,6 +233,12 @@ local plugins = {
           layout = "float"
         }
       })
+    end,
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
     end,
   },
 
@@ -300,7 +290,11 @@ local plugins = {
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
     end
-  }
+  },
+  "Vigemus/iron.nvim",
+  -- debugging
+  "mfussenegger/nvim-dap",
+  "rcarriga/nvim-dap-ui"
 }
 
 require("lazy").setup(plugins)
