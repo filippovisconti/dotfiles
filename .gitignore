@@ -42,3 +42,7 @@ luac.out
 
 *.DS_Store
 *.bak
+
+alacritty/alacritty.toml-e
+
+alacritty/themes/images/

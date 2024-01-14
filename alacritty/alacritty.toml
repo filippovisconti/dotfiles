@@ -1,8 +1,10 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/Cobalt2.yml"]
-
+import = ["~/.config/alacritty/themes/themes/hyper.toml"]
+# gnome_terminal.toml
 [env]
+LANG = "en_US.UTF-8"
+LC_CTYPE = "en_US.UTF-8"
 TERM = "alacritty"
 
 [font]
@@ -59,5 +61,5 @@ decorations = "Buttonless"
 dynamic_padding = true
 
 [window.padding]
-x = 10
+x = 20
 y = 10

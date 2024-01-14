@@ -20,7 +20,7 @@ local plugins = {
   "ellisonleao/gruvbox.nvim",
   "rmehri01/onenord.nvim",
   "rebelot/kanagawa.nvim",
-
+  "NLKNguyen/papercolor-theme",
   -- improve vim
   {
     "folke/which-key.nvim",

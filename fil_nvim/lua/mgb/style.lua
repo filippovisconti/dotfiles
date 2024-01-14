@@ -1,3 +1,3 @@
 --vim.cmd[[set background=light]]
 
-vim.cmd.colorscheme("leaf")
+vim.cmd.colorscheme("papercolor")
