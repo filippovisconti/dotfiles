@@ -1,1 +1,1 @@
-require("mgb")
+require("config")

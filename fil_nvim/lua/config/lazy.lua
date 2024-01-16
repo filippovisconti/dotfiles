@@ -10,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+
 local plugins = {
   -- themes
   "daschw/leaf.nvim",
@@ -82,6 +83,11 @@ local plugins = {
       require("leap").add_default_mappings()
     end
   },
+  -- {
+  --   "m4xshen/hardtime.nvim",
+  --   dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  --   opts = {disable_mouse = false}
+  -- },
   {
     "chentoast/marks.nvim",
     config = function()
@@ -213,7 +219,6 @@ local plugins = {
     }
   },
   -- lsp and completion
-  "github/copilot.vim",
   {
     "nvim-treesitter/nvim-treesitter",
     config = function()
@@ -256,6 +261,12 @@ local plugins = {
         color_square_width = 2,
       })
     end
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
   {
     "nvim-neorg/neorg",
