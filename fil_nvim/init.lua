@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("config.opts")
-require("config.remaps")
 require("config.neovide")
+require("config.remaps")
 
 require("lazy").setup({
     spec = {
