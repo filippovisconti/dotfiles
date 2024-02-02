@@ -21,6 +21,6 @@ wk.register({
         end, "Previous file" },
         l = { function()
             require('harpoon.ui').toggle_quick_menu()
-        end, "Toggle Harpoon Marks list" },
+        end, "Show Harpoon Marks list" },
     },
 }, { prefix = "<leader>" })
