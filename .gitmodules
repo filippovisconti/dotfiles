@@ -1,3 +1,0 @@
-[submodule "max_nvim"]
-	path = max_nvim
-	url = https://github.com/Laellekoenig/nvim_config
