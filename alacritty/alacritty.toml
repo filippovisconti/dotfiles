@@ -61,5 +61,5 @@ decorations = "Buttonless"
 dynamic_padding = true
 
 [window.padding]
-x = 20
+x = 10
 y = 10

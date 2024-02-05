@@ -4,12 +4,12 @@ vim.keymap.set('n', '<leader>fg',
   ":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({}))<cr>", {})
 vim.keymap.set('n', '<leader>fc',
   ":lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_ivy({}))<cr>", {})
---vim.keymap.set('n', '<leader>fb', ":lua require'telescope.builtin'.buffers(require('telescope.themes').get_ivy({}))<cr>", {})
 vim.keymap.set('n', '<leader>fh',
   ":lua require'telescope.builtin'.help_tags(require('telescope.themes').get_ivy({}))<cr>", {})
 vim.keymap.set('n', '<leader>fd',
   ":lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_ivy({}))<cr>", {})
-
+vim.keymap.set('n', '<leader>fy',
+  ":lua require('telescope').extensions.yank_history.yank_history()<cr>", {})
 local actions = require("telescope.actions")
 require("telescope").setup({
   defaults = {
@@ -24,3 +24,15 @@ require("telescope").setup({
   },
 })
 require("telescope").load_extension('harpoon')
+require("telescope").load_extension("yank_history")
+
+local actions = require("telescope.actions")
+require("telescope").setup {
+  defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close
+      },
+    },
+  }
+}
