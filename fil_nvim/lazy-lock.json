@@ -30,6 +30,7 @@
   "marks.nvim": { "branch": "master", "commit": "74e8d01b2a2131b6e46354cffc553aa7f81bcf5b" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "0954d7730e749d606ddf8d7ae8846848be435d53" },
   "mason.nvim": { "branch": "main", "commit": "c43eeb5614a09dc17c03a7fb49de2e05de203924" },
+  "mini.indentscope": { "branch": "main", "commit": "ca129b71edb672d30b8d7ec3138106db1b1f6a8b" },
   "neorg": { "branch": "main", "commit": "7cf5382821f661aee958bcaf7bc4111c11e6863a" },
   "no-neck-pain.nvim": { "branch": "main", "commit": "910f3d111cbdaed950aee4abedafd54abaeba51b" },
   "noice.nvim": { "branch": "main", "commit": "bf67d70bd7265d075191e7812d8eb42b9791f737" },
