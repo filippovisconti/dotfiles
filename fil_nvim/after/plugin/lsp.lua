@@ -108,3 +108,5 @@ cmp.event:on(
   "confirm_done",
   cmp_autopairs.on_confirm_done()
 )
+vim.g.vim_markdown_conceal = 1
+vim.g.vim_markdown_math = 1
