@@ -19,20 +19,10 @@ require("telescope").setup({
         ["<C-p>"] = actions.toggle_selection + actions.move_selection_better,
         ["<Tab>"] = actions.move_selection_next,
         ["<S-Tab>"] = actions.move_selection_previous,
+        ["<esc>"] = actions.close
       },
     },
   },
 })
 require("telescope").load_extension('harpoon')
 require("telescope").load_extension("yank_history")
-
-local actions = require("telescope.actions")
-require("telescope").setup {
-  defaults = {
-    mappings = {
-      i = {
-        ["<esc>"] = actions.close
-      },
-    },
-  }
-}

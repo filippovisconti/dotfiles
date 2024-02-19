@@ -11,5 +11,6 @@ To use it, create symlinks in your home directory:
 ```
 ln -s /path/to/repo/alacritty ~/.config/alacritty
 ln -s /path/to/repo/fil_nvim ~/.config/nvim
+ln -s /path/to/repo/sketchybar ~/.config/sketchybar
 ```
 

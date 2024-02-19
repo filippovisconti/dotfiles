@@ -1,6 +1,15 @@
 vim.g.mapleader = " "
 
+-- Undo
 vim.keymap.set("n", "U", "<c-r>")
+
+-- Select all
+vim.keymap.set("n", "==", "gg<S-v>G")
+
+
+vim.keymap.set('n', '<Leader>w', ':w<CR>')
+vim.keymap.set('n', '<Leader>q', ':q<CR>')
+vim.keymap.set('n', '<Leader>wq', ':wq<CR>')
 
 -- splits
 vim.keymap.set("n", "<leader>wh", ":split<cr>")
@@ -15,6 +24,10 @@ vim.keymap.set("n", "<leader>l", "<c-w>l<cr>")
 -- indenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
+
+-- Quickly append semicolon or comma
+vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
+vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
 
 -- center screen
 vim.api.nvim_create_autocmd({ "InsertEnter" }, { command = "norm zz" })
@@ -56,3 +69,9 @@ vim.keymap.set({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
 
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
+
+-- Open in finder
+vim.keymap.set('n', '<Leader><Leader>o', ':!open $PWD<CR><CR>', { silent = true })
+
+-- Dismiss Noice Message
+vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", {desc = "Dismiss Noice Message"})

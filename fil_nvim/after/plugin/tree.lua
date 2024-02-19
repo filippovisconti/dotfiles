@@ -4,7 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup({
   sort_by = "extension",
   filters = {
-    dotfiles = false,
+    dotfiles = true,
   },
   -- actions = {
   --   open_file = {
