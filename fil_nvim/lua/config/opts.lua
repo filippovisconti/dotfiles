@@ -11,16 +11,25 @@ vim.opt.shiftwidth = width
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
 vim.opt.scrolloff = 8
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.inccommand = "split"
+vim.opt.ignorecase = true
+vim.opt.breakindent = true
+vim.opt.wrap = false
+
+vim.opt.backspace = { "indent,eol,start" }
 
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.hidden = true
+
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
 vim.opt.updatetime = 50
 vim.opt.termguicolors = true
@@ -29,6 +38,7 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_cargo_provider = 0
-vim.g.python3_host_prog = "/opt/homebrew/bin/python3"
-
-vim.cmd [[set noshowmode]]
+vim.g.python3_host_prog = "~/.config/nvim/.venv/bin/python3"
+vim.g.Tex_IgnoredWarnings = "Underfull"
+vim.g.vimtex_quickfix_ignore_filters = "Underfull"
+vim.cmd([[set noshowmode]])

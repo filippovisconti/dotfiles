@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 -- Undo
 vim.keymap.set("n", "U", "<c-r>")
+vim.keymap.set("n", "x", '"_x')
 
 -- Select all
 vim.keymap.set("n", "==", "gg<S-v>G")
@@ -26,8 +27,8 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- Quickly append semicolon or comma
-vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
-vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
+vim.keymap.set('n', ';;', '<Esc>A;<Esc>')
+vim.keymap.set('n', ',,', '<Esc>A,<Esc>')
 
 -- center screen
 vim.api.nvim_create_autocmd({ "InsertEnter" }, { command = "norm zz" })
