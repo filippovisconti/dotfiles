@@ -13,13 +13,15 @@ if [[ $IS_VPN != "" ]]; then
 elif [[ $IP_ADDRESS != "" ]]; then
 	COLOR=$COLOR_BLUE
 	ICON=$ICON_WIFI
+    PUBLIC_IP=$(curl -s https://ipinfo.io/ip)
 	LABEL=$IP_ADDRESS
 else
 	COLOR=$COLOR_WHITE
 	ICON=$ICON_WIFI_OFF
+    PUBLIC_IP="No Internet"
 	LABEL="Not Connected"
 fi
 
 sketchybar --set $NAME background.color=$COLOR \
 	icon=$ICON \
-	label="$LABEL"
+	label="$LABEL | $PUBLIC_IP"
