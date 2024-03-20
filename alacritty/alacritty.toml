@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/hyper.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_latte.toml"]
 # gnome_terminal.toml
 [env]
 LANG = "en_US.UTF-8"
@@ -8,31 +8,20 @@ LC_CTYPE = "en_US.UTF-8"
 TERM = "alacritty"
 
 [font]
-size = 14.0
-
-[font.bold]
-family = "MonoLisa"
-style = "Bold"
-
-[font.bold_italic]
-family = "MonoLisa"
-style = "Italic"
+size = 18.0
 
 [font.glyph_offset]
 x = 0
 y = 7
 
-[font.italic]
-family = "MonoLisa"
-style = "Italic"
-
 [font.normal]
-family = "MonoLisa Nerd Font"
+family = "IosevkaTerm Nerd Font Mono"
+# family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [font.offset]
-x = 0
-y = 14
+x = 1
+y = 15
 
 [[keyboard.bindings]]
 chars = '\p'
@@ -51,6 +40,8 @@ mods = "Control"
 
 [scrolling]
 history = 100000
+multiplier = 1
+
 
 [selection]
 save_to_clipboard = true
@@ -59,6 +50,9 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 [window]
 decorations = "Buttonless"
 dynamic_padding = true
+opacity = 0.3
+blur = true
+
 
 [window.padding]
 x = 10
