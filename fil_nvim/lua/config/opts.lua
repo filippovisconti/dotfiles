@@ -17,7 +17,7 @@ vim.opt.incsearch = true
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
 vim.opt.breakindent = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.backspace = { "indent,eol,start" }
 
