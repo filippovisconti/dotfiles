@@ -6,7 +6,7 @@ SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 
 sketchybar --bar color=0x00000000 \
-                 height=56        \
+                 height=40        \
                  margin=0         \
                  y_offset=0       \
                  padding_left=8   \
@@ -17,24 +17,24 @@ sketchybar --bar color=0x00000000 \
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
 
-sketchybar --default padding_left=8                                    \
-                     padding_right=8                                   \
+sketchybar --default padding_left=10                                    \
+                     padding_right=10                                   \
                                                                        \
                      background.border_width=0                         \
-                     background.height=40                              \
-                     background.corner_radius=12                       \
+                     background.height=30                              \
+                     background.corner_radius=15                       \
                                                                        \
                      icon.color=$COLOR_YELLOW                          \
                      icon.highlight_color=$COLOR_BACKGROUND            \
-                     icon.padding_left=6                               \
-                     icon.padding_right=2                              \
-                     icon.font="CaskaydiaCove Nerd Font:Regular:16.0"  \
+                     icon.padding_left=4                               \
+                     icon.padding_right=1                              \
+                     icon.font="CaskaydiaCove Nerd Font:Regular:12.0"  \
                                                                        \
                      label.color=$COLOR_YELLOW                         \
                      label.highlight_color=$COLOR_BACKGROUND           \
                      label.padding_left=2                              \
                      label.padding_right=6                             \
-                     label.font="MonoLisa:Bold:14.5"                   \
+                     label.font="Iosevka:Medium Extended:13.0"                   \
                      font_smoothing=true
 
 ##### Adding Menu #####
@@ -104,7 +104,7 @@ sketchybar --add item time right                        \
                            padding_right=8              \
                            background.color=$COLOR_WHITE  \
                            background.border_width=0    \
-                           background.corner_radius=6   \
+                           background.corner_radius=15   \
                            background.height=24         \
                            icon=$ICON_CLOCK             \
                            icon.highlight=on            \
@@ -138,7 +138,7 @@ sketchybar --add item  ip_address right                              \
                                   padding_left=2                     \
                                   padding_right=8                    \
                                   background.border_width=0          \
-                                  background.corner_radius=6         \
+                                  background.corner_radius=15         \
                                   background.height=24               \
                                   icon.highlight=on                  \
                                   label.highlight=on                 \
