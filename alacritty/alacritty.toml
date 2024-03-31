@@ -20,8 +20,8 @@ family = "IosevkaTerm Nerd Font Mono"
 style = "Regular"
 
 [font.offset]
-x = 1
-y = 15
+x = 0
+y = 17
 
 [[keyboard.bindings]]
 chars = '\p'
