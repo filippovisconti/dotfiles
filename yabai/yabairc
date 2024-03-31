@@ -51,6 +51,7 @@ yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
 yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
 yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
 yabai -m rule --add app="^FaceTime" manage=off
+yabai -m rule --add app="^Raspberry Pi Imager" manage=off
 yabai -m rule --add app="^Raycast" manage=off
 
 yabai -m signal --add event=window_created action="sketchybar -m --trigger window_change &> /dev/null"
