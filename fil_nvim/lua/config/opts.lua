@@ -33,6 +33,7 @@ vim.opt.fileencoding = "utf-8"
 
 vim.opt.updatetime = 50
 vim.opt.termguicolors = true
+vim.opt.fileformats = { "unix", "dos" }
 
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
@@ -41,4 +42,9 @@ vim.g.loaded_cargo_provider = 0
 vim.g.python3_host_prog = "~/.config/nvim/.venv/bin/python3"
 vim.g.Tex_IgnoredWarnings = "Underfull"
 vim.g.vimtex_quickfix_ignore_filters = "Underfull"
+vim.g.neoformat_basic_format_trim = 1
+vim.g.neoformat_basic_format_align = 1
+vim.g.neoformat_basic_format_retab = 0
+vim.g.latexindent_opt = "-m"
+
 vim.cmd([[set noshowmode]])
