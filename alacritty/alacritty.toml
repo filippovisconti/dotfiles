@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/catppuccin_latte.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 # gnome_terminal.toml
 [env]
 LANG = "en_US.UTF-8"
@@ -39,7 +39,7 @@ key = "Key6"
 mods = "Control"
 
 [scrolling]
-history = 100000
+history = 10000
 multiplier = 1
 
 
@@ -50,10 +50,10 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 [window]
 decorations = "Buttonless"
 dynamic_padding = true
-opacity = 0.3
+opacity = 0.7
 blur = true
 
 
 [window.padding]
 x = 10
-y = 10
+y = 0
