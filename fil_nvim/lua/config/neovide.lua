@@ -1,6 +1,6 @@
 if vim.g.neovide then
 	vim.opt.linespace = 18
-	vim.g.neovide_transparency = 0.3
+	vim.g.neovide_transparency = 0.7
 	vim.g.neovide_window_blurred = true
 	-- vim.g.neovide_padding_top = 0
 	-- vim.g.neovide_padding_bottom = -20

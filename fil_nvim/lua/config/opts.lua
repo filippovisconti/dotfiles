@@ -45,6 +45,6 @@ vim.g.vimtex_quickfix_ignore_filters = "Underfull"
 vim.g.neoformat_basic_format_trim = 1
 vim.g.neoformat_basic_format_align = 1
 vim.g.neoformat_basic_format_retab = 0
-vim.g.latexindent_opt = "-m"
+vim.g.latexindent_opt = "-l textwrap.yaml -c backup chapters/* Thesis.tex references.bib -m --wd -s"
 
 vim.cmd([[set noshowmode]])
