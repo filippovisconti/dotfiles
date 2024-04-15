@@ -1,0 +1,140 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.showTabs": "single",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.colorCustomizations": {
+    "editorSuggestWidget.selectedBackground": "#231739",
+    "sideBar.background": "#191521",
+    "list.activeSelectionBackground": "#231739",
+    "list.inactiveSelectionBackground": "#231739",
+    "list.focusBackground": "#231739",
+    "list.hoverBackground": "#231739",
+    "terminalCursor.foreground": "#C45DFF"
+  },
+  "editor.minimap.enabled": false,
+  "editor.guides.indentation": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "all",
+  "editor.matchBrackets": "always",
+  "editor.lightbulb.enabled": "off",
+  "editor.hover.enabled": true,
+  "editor.showFoldingControls": "never",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Iosevka",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 2.5,
+  "breadcrumbs.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "none",
+  "files.insertFinalNewline": true,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontFamily": "IosevkaTerm Nerd Font",
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.fontSize": 14,
+  "apc.menubar.compact": true,
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "opacity": 0.9
+  },
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 30,
+    "itemSize": 30,
+    "itemMargin": 10
+  },
+  "apc.header": {
+    "height": 40
+  },
+  "apc.sidebar.titlebar": {
+    "height": 0
+  },
+  "apc.font.family": "Iosevka",
+  "apc.listRow": {
+    "lists": ["explorer-folders-view", "quick-input-list", "results"],
+    "height": 30,
+    "fontSize": 11
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 25,
+    "fontSize": 10
+  },
+  "apc.stylesheet": {
+    ".title-actions": "display: none !important",
+    ".quick-input-widget.show-file-icons, .editor-widget.find-widget": "box-shadow: none !important",
+    ".filematch .monaco-icon-label:before, .custom-list-row.results .monaco-list-row .monaco-icon-label:before": "background-position: 0 bottom !important",
+    ".filematch .monaco-count-badge": "padding: 5px 6px 0 6px !important",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".sidebar": "border: none !important",
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #67D0FF 10%, #C45DFF 100%)",
+    ".quick-input-list-row div": "display: flex !important; align-items: center !important",
+    // ".panel .composite.title": "visibility: hidden !important",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "padding-bottom: 6px !important",
+    ".sidebar .title-label h2": "line-height: 2.8 !important",
+    ".monaco-editor .scroll-decoration": "display: none !important"
+    // ".monaco-scrollable-element > .shadow.top": "display: none !important",
+    // ".monaco-split-view2 > .monaco-scrollable-element > .split-view-container": "background: #191521 !important",
+  },
+  "apc.imports": [
+    "/Users/filippovisconti/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.2/dist/updateHandler.js"
+  ],
+  "editor.accessibilitySupport": "off",
+  "animations.Enabled": true,
+  "animations.CursorAnimation": true,
+  "workbench.colorTheme": "Aura Dracula Spirit",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "window.commandCenter": false,
+  "redhat.telemetry.enabled": false,
+  "workbench.activityBar.location": "bottom",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode_custom_css.imports": [
+    "/Users/filippovisconti/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.2/dist/updateHandler.js"
+  ],
+  "window.zoomLevel": 2,
+  "editor.wordWrap": "on",
+  "editor.indentSize": "tabSize",
+  "cSpell.enableFiletypes": ["!jsonc", "!python"],
+  "animations.Install-Method": "Apc Customize UI++",
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "lower",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "explorer.fileNesting.enabled": true,
+  "window.density.editorTabHeight": "compact",
+  "update.mode": "manual"
+}
