@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_latte.toml"]
 # gnome_terminal.toml
 [env]
 LANG = "en_US.UTF-8"
