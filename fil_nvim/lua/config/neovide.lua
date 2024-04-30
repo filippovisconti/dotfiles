@@ -9,7 +9,7 @@ if vim.g.neovide then
 	vim.g.neovide_hide_mouse_when_typing = true
 	vim.g.neovide_refresh_rate = 120
 	vim.g.neovide_refresh_rate_idle = 5
-	vim.o.guifont = "IosevkaTerm Nerd Font:h18"
+	vim.o.guifont = "IosevkaTerm Nerd Font:h14"
 	-- vim.o.guifont = "MonoLisa:h15"
 	--vim.g.neovide_theme = 'auto'
 	vim.g.neovide_scale_factor = 1.0

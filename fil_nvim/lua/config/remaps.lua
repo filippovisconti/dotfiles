@@ -7,10 +7,11 @@ vim.keymap.set("n", "x", '"_x')
 -- Select all
 vim.keymap.set("n", "==", "gg<S-v>G")
 
+vim.keymap.set("n", "<Leader>w", ":w<CR>")
+vim.keymap.set("n", "<D-s>", ":w<CR>")
 
-vim.keymap.set('n', '<Leader>w', ':w<CR>')
-vim.keymap.set('n', '<Leader>q', ':q<CR>')
-vim.keymap.set('n', '<Leader>wq', ':wq<CR>')
+vim.keymap.set("n", "<Leader>q", ":q<CR>")
+vim.keymap.set("n", "<Leader>wq", ":wq<CR>")
 
 -- splits
 vim.keymap.set("n", "<leader>wh", ":split<cr>")
@@ -27,8 +28,8 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- Quickly append semicolon or comma
-vim.keymap.set('n', ';;', '<Esc>A;<Esc>')
-vim.keymap.set('n', ',,', '<Esc>A,<Esc>')
+vim.keymap.set("n", ";;", "<Esc>A;<Esc>")
+vim.keymap.set("n", ",,", "<Esc>A,<Esc>")
 
 -- center screen
 vim.api.nvim_create_autocmd({ "InsertEnter" }, { command = "norm zz" })
@@ -55,24 +56,24 @@ vim.keymap.set("n", "<leader>fo", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
 -- terminal
 vim.keymap.set("t", "<esc>", "<c-\\><c-n>")
 
-vim.keymap.set('v', '<D-c>', '"+y')         -- Copy
-vim.keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
-vim.keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
-vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+vim.keymap.set("v", "<D-c>", '"+y') -- Copy
+vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
+vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
+vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 
 -- trigger renaming
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
-vim.keymap.set({"n","x"}, "p", "<Plug>(YankyPutAfter)")
-vim.keymap.set({"n","x"}, "P", "<Plug>(YankyPutBefore)")
-vim.keymap.set({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
-vim.keymap.set({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
 
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
 
 -- Open in finder
-vim.keymap.set('n', '<Leader><Leader>o', ':!open $PWD<CR><CR>', { silent = true })
+vim.keymap.set("n", "<Leader><Leader>o", ":!open $PWD<CR><CR>", { silent = true })
 
 -- Dismiss Noice Message
-vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", {desc = "Dismiss Noice Message"})
+vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
