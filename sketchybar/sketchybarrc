@@ -97,6 +97,9 @@ sketchybar --add item seperator.l2 left                   \
 # volume is registered. More info about the event system can be found here:
 # https://felixkratz.github.io/SketchyBar/config/events
 
+
+
+
 sketchybar --add item time right                        \
            --set      time script="$PLUGIN_DIR/time.sh" \
                            update_freq=5                \
@@ -208,6 +211,16 @@ sketchybar --add item ram right                         \
 sketchybar --add bracket activity ram disk cpu                      \
            --set         activity background.color=$COLOR_BACKGROUND     \
                                   background.border_color=$COLOR_WHITE
+sketchybar --add item svim.mode right \
+           --set svim.mode popup.align=right \
+                           icon= \
+                           icon.font="Hack Nerd Font Mono:Bold:28.0" \
+                           label.font="Hack Nerd Font Mono:Bold:13.0" \
+                           icon.color=0xffff6578 \
+                           script="sketchybar --set svim.mode popup.drawing=off" \
+           --subscribe svim.mode front_app_switched window_focus \
+           --add item svim.cmdline popup.svim.mode \
+           --set svim.cmdline icon="Command: "
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to
