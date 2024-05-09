@@ -38,6 +38,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"OmniSharp/omnisharp-vim",
 	"lervag/vimtex",
+	"joeveiga/ng.nvim",
 
 	-- completion
 	"hrsh7th/nvim-cmp",

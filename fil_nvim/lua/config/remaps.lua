@@ -6,11 +6,12 @@ vim.keymap.set("n", "x", '"_x')
 
 -- Select all
 vim.keymap.set("n", "==", "gg<S-v>G")
+vim.keymap.set("n", "<D-a>", "gg<S-v>G")
 
 vim.keymap.set("n", "<Leader>w", ":w<CR>")
 vim.keymap.set("n", "<D-s>", ":w<CR>")
 
-vim.keymap.set("n", "<Leader>q", ":q<CR>")
+vim.keymap.set("n", "<D-d>", ":q<CR>")
 vim.keymap.set("n", "<Leader>wq", ":wq<CR>")
 
 -- splits
