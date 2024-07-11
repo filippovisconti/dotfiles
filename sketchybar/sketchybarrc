@@ -175,42 +175,7 @@ sketchybar --add item seperator.r2 right                  \
                                    icon.drawing=off       \
                                    label.drawing=off
 
-sketchybar --add item ram right                         \
-           --set      ram script="$PLUGIN_DIR/ram.sh"   \
-                          update_freq=30                \
-                          padding_left=2                \
-                          padding_right=8               \
-                          background.border_width=0     \
-                          background.height=24          \
-                          icon=$ICON_RAM                \
-                          icon.color=$COLOR_GREEN       \
-                          label.color=$COLOR_GREEN      \
-                                                        \
-           --add item disk right                        \
-           --set      disk script="$PLUGIN_DIR/disk.sh" \
-                           update_freq=60               \
-                           padding_left=2               \
-                           padding_right=2              \
-                           background.border_width=0    \
-                           background.height=24         \
-                           icon=$ICON_DISK              \
-                           icon.color=$COLOR_YELLOW     \
-                           label.color=$COLOR_YELLOW    \
-                                                        \
-           --add item cpu right                         \
-           --set      cpu script="$PLUGIN_DIR/cpu.sh"   \
-                          update_freq=10                \
-                          padding_left=8                \
-                          padding_right=2               \
-                          background.border_width=0     \
-                          background.height=24          \
-                          icon=$ICON_CPU                \
-                          icon.color=$COLOR_RED         \
-                          label.color=$COLOR_RED
 
-sketchybar --add bracket activity ram disk cpu                      \
-           --set         activity background.color=$COLOR_BACKGROUND     \
-                                  background.border_color=$COLOR_WHITE
 sketchybar --add item svim.mode right \
            --set svim.mode popup.align=right \
                            icon= \

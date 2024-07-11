@@ -25,3 +25,7 @@ export OMP_PREFIX="/opt/homebrew/opt/libomp"
 
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+export PATH=$PATH:$GOPATH/bin
+# export MY_INSTALL_DIR=$HOME/.local
+# export PATH="$MY_INSTALL_DIR/bin:$PATH"

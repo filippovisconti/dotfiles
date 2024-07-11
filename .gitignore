@@ -48,3 +48,5 @@ alacritty/alacritty.toml-e
 alacritty/themes/images/
 
 fil_nvim/.venv/
+
+nvim/.venv/

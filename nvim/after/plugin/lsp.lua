@@ -30,7 +30,7 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "rust_analyzer", "pyright", "tailwindcss" },
+	ensure_installed = { "tsserver", "rust_analyzer", "pyright", "tailwindcss", "gopls" },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
@@ -113,3 +113,4 @@ vim.g.vim_markdown_conceal = 1
 vim.g.vim_markdown_math = 1
 
 require("lspconfig").angularls.setup({})
+require("lspconfig").gopls.setup({})

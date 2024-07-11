@@ -11,3 +11,7 @@ eval "$(thefuck --alias)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(gh copilot alias -- zsh)"
 eval "$(starship init zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

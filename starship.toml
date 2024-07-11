@@ -1,13 +1,8 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
-
-
 command_timeout=200
 
 palette = 'catppuccin_latte'
-
-
-
 [palettes.catppuccin_latte]
 rosewater = "#dc8a78"
 flamingo = "#dd7878"
