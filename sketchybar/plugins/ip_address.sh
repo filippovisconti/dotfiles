@@ -13,12 +13,12 @@ if [[ $IS_VPN != "" ]]; then
     PUBLIC_IP=$(curl -s https://ipinfo.io/ip)
 	LABEL="VPN"
 elif [[ $IP_ADDRESS != "" ]]; then
-	COLOR=$COLOR_BLUE
+	COLOR=$COLOR_WHITE
 	ICON=$ICON_WIFI
     PUBLIC_IP=$(curl -s https://ipinfo.io/ip)
 	LABEL=$IP_ADDRESS
 else
-	COLOR=$COLOR_WHITE
+	COLOR=$COLOR_RED
 	ICON=$ICON_WIFI_OFF
     PUBLIC_IP="No Internet"
 	LABEL="Not Connected"

@@ -37,74 +37,12 @@ sketchybar --default padding_left=10                                    \
                      label.font="Iosevka:Medium Extended:13.0"                   \
                      font_smoothing=true
 
-##### Adding Menu #####
-
-##### Adding Mission Control Space Indicators #####
-# Now we add some mission control spaces:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces
-
-sketchybar --add event window_change
-
-COLORS_SPACE=($COLOR_YELLOW $COLOR_CYAN $COLOR_MAGENTA $COLOR_WHITE $COLOR_BLUE $COLOR_RED $COLOR_GREEN)
-LENGTH=${#ICONS_SPACE[@]}
-
-for i in "${!ICONS_SPACE[@]}"
-do
-  sid=$(($i+1))
-  PAD_LEFT=8
-  PAD_RIGHT=8
-  if [[ $i == 0 ]]; then
-    PAD_LEFT=8
-  elif [[ $i == $(($LENGTH-1)) ]]; then
-    PAD_RIGHT=8
-  fi
-  sketchybar --add space space.$sid left                                       \
-             --set       space.$sid script="$PLUGIN_DIR/app_space.sh"          \
-                                    associated_space=$sid                      \
-                                    padding_left=$PAD_LEFT                     \
-                                    padding_right=$PAD_RIGHT                   \
-                                    background.color=${COLORS_SPACE[i]}        \
-                                    background.border_width=0                  \
-                                    background.corner_radius=6                 \
-                                    background.height=24                       \
-                                    icon=${ICONS_SPACE[i]}                     \
-                                    icon.color=${COLORS_SPACE[i]}              \
-                                    label="_"                                  \
-                                    label.color=${COLORS_SPACE[i]}             \
-             --subscribe space.$sid front_app_switched window_change
-done
-
-sketchybar --add bracket spaces '/space\..*/'                      \
-           --set         spaces background.color=$COLOR_BACKGROUND
-
-sketchybar --add item seperator.l2 left                   \
-           --set      seperator.l2 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off    \
-
-
-##### Adding Right Items #####
-# In the same way as the left items we can add items to the right side.
-# Additional position (e.g. center) are available, see:
-# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
-
-# Some items refresh on a fixed cycle, e.g. the clock runs its script once
-# every 10s. Other items respond to events they subscribe to, e.g. the
-# volume.sh script is only executed once an actual change in system audio
-# volume is registered. More info about the event system can be found here:
-# https://felixkratz.github.io/SketchyBar/config/events
-
-
-
 
 sketchybar --add item time right                        \
            --set      time script="$PLUGIN_DIR/time.sh" \
                            update_freq=5                \
                            padding_left=2               \
-                           padding_right=8              \
+                           padding_right=4              \
                            background.color=$COLOR_WHITE  \
                            background.border_width=0    \
                            background.corner_radius=15   \
@@ -128,18 +66,19 @@ sketchybar --add bracket clock time date                          \
                                background.border_color=$COLOR_WHITE
 
 
-sketchybar --add item seperator.r1 right                  \
-           --set      seperator.r1 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off
+# sketchybar --add item seperator.r1 right                  \
+#            --set      seperator.r1 padding_left=4         \
+#                                    padding_right=4        \
+#                                    background.drawing=off \
+#                                    icon.drawing=off       \
+#                                    label.drawing=off
 
-sketchybar --add item  ip_address right                              \
+sketchybar --add item  ip_address left                              \
            --set       ip_address script="$PLUGIN_DIR/ip_address.sh" \
                                   update_freq=30                     \
                                   padding_left=2                     \
-                                  padding_right=8                    \
+                                  padding_right=2                    \
+                                  background.color=$COLOR_WHITE     \
                                   background.border_width=0          \
                                   background.corner_radius=15         \
                                   background.height=24               \
@@ -147,7 +86,7 @@ sketchybar --add item  ip_address right                              \
                                   label.highlight=on                 \
            --subscribe ip_address wifi_change                        \
                                                                      \
-           --add item  volume right                                  \
+           --add item  volume left                                  \
            --set       volume script="$PLUGIN_DIR/volume.sh"         \
                               padding_left=2                         \
                               padding_right=2                        \
@@ -155,25 +94,18 @@ sketchybar --add item  ip_address right                              \
                               background.height=24                   \
            --subscribe volume volume_change                          \
                                                                      \
-           --add item  battery right                                 \
+           --add item  battery left                                 \
            --set       battery script="$PLUGIN_DIR/battery.sh"       \
                                update_freq=120                       \
-                               padding_left=8                        \
-                               padding_right=2                       \
+                               padding_left=2                        \
+                               padding_right=8                       \
                                background.border_width=0             \
                                background.height=24                  \
            --subscribe battery system_woke power_source_change
 
 sketchybar --add bracket status ip_address volume battery           \
            --set         status background.color=$COLOR_BACKGROUND  \
-                                background.border_color=$COLOR_BLUE
-
-sketchybar --add item seperator.r2 right                  \
-           --set      seperator.r2 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off
+                                background.border_color=$COLOR_WHITE
 
 
 sketchybar --add item svim.mode right \
