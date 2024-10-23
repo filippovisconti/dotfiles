@@ -29,3 +29,4 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export PATH=$PATH:$GOPATH/bin
 # export MY_INSTALL_DIR=$HOME/.local
 # export PATH="$MY_INSTALL_DIR/bin:$PATH"
+ssh-add --apple-use-keychain  ~/.ssh/github_ed25519

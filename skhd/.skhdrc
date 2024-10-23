@@ -200,3 +200,15 @@ shift + lctrl + alt - l : yabai -m window --insert east
 shift + alt - space : \
     yabai -m window --toggle float; \
     yabai -m window --toggle border
+
+
+# super + b: open Arc Browser
+cmd + ctrl + alt - a : open /Applications/Arc.app
+cmd + ctrl + alt - t : open /Applications/Alacritty.app/
+cmd + ctrl + alt - s : open /Applications/Spotify.app/
+cmd + ctrl + alt - w : open /Applications/WhatsApp.app/
+cmd + ctrl + alt - e : open /Applications/Telegram.app/
+cmd + ctrl + alt - o : open '/Applications/Microsoft Outlook.app/'
+cmd + ctrl + alt - p : open /Applications/Thunderbird.app/
+cmd + ctrl + alt - c : open '/Applications/Visual Studio Code.app/'
+
