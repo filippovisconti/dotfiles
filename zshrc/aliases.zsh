@@ -14,3 +14,12 @@ alias nvimconfig="nvim ~/.config/nvim"
 alias alacconfig="nvim ~/.config/alacritty/alacritty.toml"
 alias sshconfig="nvim ~/.ssh/config"
 alias zshconfig="nvim ~/.zshrc"
+
+function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+                builtin cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+}
