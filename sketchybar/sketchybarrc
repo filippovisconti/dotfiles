@@ -1,12 +1,11 @@
 #!/bin/bash
 
 source "$HOME/.config/colors.sh"
+source "$HOME/.config/icons.sh"
 source "$HOME/Developer/github/dotfiles/sketchybar/icon_map.sh"
 
 PLUGIN_DIR="$HOME/Developer/github/dotfiles/sketchybar/plugins"
 ITEM_DIR="$HOME/Developer/github/dotfiles/sketchybar/items"
-SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
-POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 
 sketchybar --add event aerospace_workspace_change
 
@@ -17,27 +16,19 @@ sketchybar --bar color=0x00000000 \
         padding_left=8 \
         padding_right=8
 
-##### Changing Defaults #####
-# We now change some default values that are applied to all further items
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
 
-source $ITEM_DIR/aerospace.sh
 
-sketchybar --default padding_left=10 \
-        padding_right=10 \
+sketchybar --default \
         \
         background.border_width=0 \
         background.height=30 \
         background.corner_radius=15 \
         \
-        icon.color="$COLOR_YELLOW" \
         icon.highlight_color="$COLOR_BACKGROUND" \
         icon.padding_left=4 \
         icon.padding_right=1 \
         icon.font="CaskaydiaCove Nerd Font:Regular:12.0" \
         \
-        label.color="$COLOR_YELLOW" \
         label.highlight_color="$COLOR_BACKGROUND" \
         label.padding_left=2 \
         label.padding_right=6 \
@@ -71,26 +62,19 @@ sketchybar --add bracket clock time date \
         --set clock background.color="$COLOR_BACKGROUND" \
         background.border_color="$COLOR_WHITE"
 
+
 sketchybar --add item ip_address left \
         --set ip_address script="$PLUGIN_DIR/ip_address.sh" \
         update_freq=30 \
         padding_left=2 \
         padding_right=2 \
-        background.color=$COLOR_WHITE \
+        background.color="$COLOR_WHITE" \
         background.border_width=0 \
         background.corner_radius=15 \
         background.height=24 \
         icon.highlight=on \
         label.highlight=on \
         --subscribe ip_address wifi_change \
-        \
-        --add item volume left \
-        --set volume script="$PLUGIN_DIR/volume.sh" \
-        padding_left=2 \
-        padding_right=2 \
-        background.border_width=0 \
-        background.height=24 \
-        --subscribe volume volume_change \
         \
         --add item battery left \
         --set battery script="$PLUGIN_DIR/battery.sh" \
@@ -101,20 +85,11 @@ sketchybar --add item ip_address left \
         background.height=24 \
         --subscribe battery system_woke power_source_change
 
-sketchybar --add bracket status ip_address volume battery \
-        --set status background.color=$COLOR_BACKGROUND \
-        background.border_color=$COLOR_WHITE
+sketchybar --add bracket status ip_address battery \
+        --set status background.color="$COLOR_BACKGROUND" \
+        background.border_color="$COLOR_WHITE"
 
-# sketchybar --add item svim.mode right \
-#         --set svim.mode popup.align=right \
-#         icon= \
-#         icon.font="Hack Nerd Font Mono:Bold:28.0" \
-#         label.font="Hack Nerd Font Mono:Bold:13.0" \
-#         icon.color=0xffff6578 \
-#         script="sketchybar --set svim.mode popup.drawing=off" \
-#         --subscribe svim.mode front_app_switched window_focus \
-#         --add item svim.cmdline popup.svim.mode \
-#         --set svim.cmdline icon="Command: "
+source "$ITEM_DIR"/aerospace.sh
 
 sketchybar \
         --add alias "AeroSpace,Item-0" right \
